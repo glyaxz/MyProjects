@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\TestController;
 use Illuminate\Support\Facades\Route;
 
 //use App\Http\Controllers\TestController;
@@ -15,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+/* Route::get('/', function () {
     return view('welcome');
 });
 
@@ -46,3 +47,6 @@ Route::get('/test',[App\Http\Controllers\TestController::class, 'test']);
     //Existe 2 formas de identificar los controladores:
         //1. En la cabecera del fichero con use
         //2. En el Route directamente
+ */
+
+Route::get('/', [TestController::class, 'test']);
